@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prudential Realty</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 4px solid #2980b9;
+            animation: slideIn 1s ease-out;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative; /* Ensures the logo is positioned relative to the header */
+        }
+
+        /* Position the logo */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px; /* Adjust size of the logo */
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Contact Info Section */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .contact-info div {
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .contact-info i {
+            font-size: 50px;
+            color: #3498db;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info i:hover {
+            transform: scale(1.2);
+        }
+
+        .contact-info a {
+            display: inline-block;
+            background-color: #2980b9;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            background-color: #3498db;
+            transform: translateY(-5px);
+        }
+
+        /* Location Section */
+        .location {
+            margin-top: 40px;
+            text-align: center;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .location h2 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Commercial Properties Section */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Adjust Image Size */
+        .section img {
+            width: 60%;  /* Reduced the size of the image */
+            height: auto;
+            border-radius: 15px;
+            margin-top: 20px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .section p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section p a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .section p a:hover {
+            color: #3498db;
+        }
+
+        /* Updated "Browse Our Listings" Button Styles */
+        .button-hover {
+            background-color: #3498db; /* Bright blue */
+            color: white; /* Default text color is white */
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            /* Removed the transform and hover effects */
+            transition: background-color 0.3s ease;
+        }
+
+        .button-hover:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+            color: white; /* Keep the text color white on hover */
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="PRlogo1.jpg" alt="Prudential Realty Logo" class="logo"> <!-- Local logo image file -->
+    <h1>Welcome to Prudential Realty</h1>
+    <p>Your trusted partner in real estate</p>
+</header>
+
+
+<!-- New Section for Commercial Properties -->
+<section class="section">
+    <h2>Find Commercial Properties for Sale or Lease</h2>
+    <!-- Insert the image of commercial properties here -->
+    <img src="SO.jpg" alt="Commercial Properties" /> <!-- Replace with the actual filename -->
+    <p>Search Prudential Realty's commercial real estate listings for sale and lease. Our investment and leasing opportunities include office, industrial, retail, multi-family, and hospitality properties, as well as specialized spaces for healthcare, automotive, self-storage, and more.</p>
+    <p><a href="https://wa.me/919908622295?text=Hello!%20I%20am%20interested%20in%20the%20commercial%20properties%20you%20listed." class="button-hover">Browse Our Listings</a></p>
+</section>
+
+<section class="contact-info">
+    <div>
+        <i class="fas fa-phone-alt"></i>
+        <p>Phone/WhatsApp: <a href="tel:+919908622295">9908622295</a></p>
+        <p><a href="https://wa.me/919908622295" class="whatsapp-link">Chat on WhatsApp</a></p>
+    </div>
+</section>
+
+<section class="location">
+    <h2>Our Location</h2>
+    <p>Prudential Realty is located at:</p>
+    <p><strong>Raheja IT Park, SBR Pearl, 301 & 302 Huda Techno Enclave Ph -II Hitec City, opp. Mindspace, Madhapur, Hyderabad, Telangana 500081</strong></p>
+    <p>Use the map below to find us:</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.37587736303!2d78.3742080737913!3d17.441714601240434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb941fdaaaaaab%3A0x8ef437eae68ea424!2sPrudential%20Realty%20%7C%20Office%20spaces%20%7C%20Commercial%20%26%20Investment%20Property%20%7C%20Hyderabad%20%7C%20Bangalore!5e0!3m2!1sen!2sin!4v1739599107166!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+</body>
+</html>
+
+
